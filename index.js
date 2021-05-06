@@ -1,28 +1,30 @@
 // Code your solution here
 let friends = ['Teresa', 'Grecia', 'Alex', 'Shannon', 'Adam',]
 
+// function findMatching(listOfNames, person) {
+//     let sameName = listOfNames.filter(function(element) {
+//         if (element.toLowerCase() === person.toLowerCase()) {
+//             return element;
+//         }
+//     });
+//     return sameName;
+
+// function findMatching(listOfNames, person) {
+//     return listOfNames.filter(element => {
+//         if (element.toLowerCase() === person.toLowerCase()) {
+//             return element;
+//         }
+//     });
+// }
+
 function findMatching(listOfNames, person) {
-    let sameName = listOfNames.filter(function(element) {
-        if (element.toLowerCase() === person.toLowerCase()) {
-            return element;
-        }
-    });
-    return sameName;
+    return listOfNames.filter(element => element.toLowerCase() === person.toLowerCase())
 }
 
-
 function fuzzyMatch(listOfNames, letters) {
-    let sameLetters = listOfNames.filter(function(element) {
-        return element.startsWith(letters);
-    });
-    return sameLetters;
-};
+    return listOfNames.filter(element => element.startsWith(letters))
+}
 
 function matchName(driverObjects, randomName) {
-    let nameEqual = driverObjects.filter(function(element) {
-        if (element.name === randomName) {
-            return element.name;
-        }
-    });
-    return nameEqual;
+    return driverObjects.filter(element=> element.name === randomName);
 }
